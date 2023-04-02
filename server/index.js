@@ -60,6 +60,9 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+    app.get('/', (req, res) => {
+      res.status(200).json({ message: "Hello from social-backend, Connected successful" })
+    })
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ADD DATA ONE TIME */
